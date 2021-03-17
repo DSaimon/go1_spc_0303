@@ -22,7 +22,7 @@ func process(i int, wg *sync.WaitGroup) {
 }
 
 func main() {
-	no := 3
+	no := 5
 	var wg sync.WaitGroup
 	for i := 0; i < no; i++ {
 		wg.Add(1) // WaitGroup++

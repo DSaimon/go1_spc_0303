@@ -27,7 +27,7 @@ func printOddNumbers() {
 func main() {
 	go printEvenNumbers()               // сразу идем дальше, запуск функции будет происходит в отдельной горутине
 	go printOddNumbers()                // также идем дальше, запуск функции будет происходит потом
-	time.Sleep(5000 * time.Millisecond) // тормозим основную горутину, чтобы остальные успели что-то сделать
+	time.Sleep(7000 * time.Millisecond) // тормозим основную горутину, чтобы остальные успели что-то сделать
 	fmt.Println("main goroutine died")
 }
 

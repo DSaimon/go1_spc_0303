@@ -20,6 +20,7 @@ func calcSquares(number int, squareop chan int) {
 		sum += digit * digit
 	}
 	squareop <- sum
+	close(squareop)
 }
 
 func calcCubes(number int, cubeop chan int) {
@@ -30,6 +31,7 @@ func calcCubes(number int, cubeop chan int) {
 		sum += digit * digit * digit
 	}
 	cubeop <- sum
+	close(cubeop)
 }
 
 func main() {
